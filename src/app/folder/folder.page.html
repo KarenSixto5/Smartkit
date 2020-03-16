@@ -1,21 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar class="head">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Hola User</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="background">
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <br>
+  <h3 class="ion-text-center">Modulos</h3>
+  <br>
+
+  <ion-row>
+    <ion-col offset-4>
+      <div>
+        <ion-card routerLink="/temperatura">
+          <img class="img2" src="https://image.flaticon.com/icons/svg/1684/1684374.svg">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center texto ion-padding-horizontal">Temperatura & Humedad</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-card routerLink="/aire">
+          <img class="img2" src="https://image.flaticon.com/icons/svg/1506/1506761.svg">
+          <ion-card-header> 
+            <ion-card-title class="ion-text-center texto ion-padding-horizontal">Calidad del Aire</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+        <ion-card routerLink="/sismo">
+          <img class="img2" src="https://image.flaticon.com/icons/svg/427/427735.svg">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center texto ion-padding-horizontal">Alarma de Sismo</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-col>
+    <ion-col offset-4>
+      <div>
+        <ion-card routerLink="/movimiento">
+          <img class="img2" src="https://image.flaticon.com/icons/svg/1100/1100349.svg">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center texto ion-padding-horizontal">Alarma de Movimiento</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-fab routerLink="/configuracion" horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="primary">
+      <i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+    </ion-fab-button>
+  </ion-fab> -->
+  
 </ion-content>

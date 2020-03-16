@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Temperatura & Humedad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  
+  <!--MUESTRA UN CUARTO AGREGADO, PARA MOSTRAR SU TEMPERATURA-->
+  <!-- <ion-card class="card2">
+    <ion-card-content>
+      <div>
+        <ion-list>
+          <ion-item *ngFor="let d of data">
+            <h3>{{d.room}}</h3>
+            <ion-button slot="end" size="small" (click)="cargarDatos(d.id)">Ver Más</ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-card-content>
+  </ion-card> -->
+  <!--MUESTRA UN CUARTO AGREGADO, PARA MOSTRAR SU TEMPERATURA-->
+
+
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button (click)="presentModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-footer>
+    <ion-card>
+      <ion-card-content>
+        <h3 class="ion-text-center">TODAY</h3>
+                    <p class="ion-text-center">{{myDate | date: 'dd/MM/yyyy'}}</p>
+        <div class="container">
+          <div class="row" >
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div>
+                    <h1 class="ion-text-2">{{temp}}°C</h1>
+                    <h3 class="ion-text-h ion-padding-horizontal">Humedad: {{hum}} %</h3>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                    <img class="img-card" src="https://image.flaticon.com/icons/svg/789/789395.svg">
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-footer>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "Smartkit",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
